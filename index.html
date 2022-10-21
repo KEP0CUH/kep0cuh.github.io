@@ -1,121 +1,78 @@
 <!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | AnotherStarsSingle</title>
-    <link rel="shortcut icon" href="TemplateData/favicon.ico">
-    <link rel="stylesheet" href="TemplateData/style.css">
-  </head>
-  <body>
-    <div id="unity-container" class="unity-desktop">
-      <canvas id="unity-canvas" width=960 height=600></canvas>
-      <div id="unity-loading-bar">
-        <div id="unity-logo"></div>
-        <div id="unity-progress-bar-empty">
-          <div id="unity-progress-bar-full"></div>
-        </div>
-      </div>
-      <div id="unity-warning"> </div>
-      <div id="unity-footer">
-        <div id="unity-webgl-logo"></div>
-        <div id="unity-fullscreen-button"></div>
-        <div id="unity-build-title">AnotherStarsSingle</div>
-      </div>
-    </div>
+<html lang="Ru"></html>
+<head>
+    <title>Резюме</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Это описание сайта в поисковике.">
+    <link rel="stylesheet" href="/styles/style.css">
+    <script src="Build/UnityLoader.js"></script>
     <script>
-      var container = document.querySelector("#unity-container");
-      var canvas = document.querySelector("#unity-canvas");
-      var loadingBar = document.querySelector("#unity-loading-bar");
-      var progressBarFull = document.querySelector("#unity-progress-bar-full");
-      var fullscreenButton = document.querySelector("#unity-fullscreen-button");
-      var warningBanner = document.querySelector("#unity-warning");
-
-      // Shows a temporary message banner/ribbon for a few seconds, or
-      // a permanent error message on top of the canvas if type=='error'.
-      // If type=='warning', a yellow highlight color is used.
-      // Modify or remove this function to customize the visually presented
-      // way that non-critical warnings and error messages are presented to the
-      // user.
-      function unityShowBanner(msg, type) {
-        function updateBannerVisibility() {
-          warningBanner.style.display = warningBanner.children.length ? 'block' : 'none';
-        }
-        var div = document.createElement('div');
-        div.innerHTML = msg;
-        warningBanner.appendChild(div);
-        if (type == 'error') div.style = 'background: red; padding: 10px;';
-        else {
-          if (type == 'warning') div.style = 'background: yellow; padding: 10px;';
-          setTimeout(function() {
-            warningBanner.removeChild(div);
-            updateBannerVisibility();
-          }, 5000);
-        }
-        updateBannerVisibility();
-      }
-
-      var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/kep0cuh.github.io.loader.js";
-      var config = {
-        dataUrl: buildUrl + "/kep0cuh.github.io.data",
-        frameworkUrl: buildUrl + "/kep0cuh.github.io.framework.js",
-        codeUrl: buildUrl + "/kep0cuh.github.io.wasm",
-        streamingAssetsUrl: "StreamingAssets",
-        companyName: "DefaultCompany",
-        productName: "AnotherStarsSingle",
-        productVersion: "1.0",
-        showBanner: unityShowBanner,
-      };
-
-      // By default Unity keeps WebGL canvas render target size matched with
-      // the DOM size of the canvas element (scaled by window.devicePixelRatio)
-      // Set this to false if you want to decouple this synchronization from
-      // happening inside the engine, and you would instead like to size up
-      // the canvas DOM size and WebGL render target sizes yourself.
-      // config.matchWebGLToCanvasSize = false;
-
-      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
-        // Mobile device style: fill the whole browser client area with the game canvas:
-
-        var meta = document.createElement('meta');
-        meta.name = 'viewport';
-        meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
-        document.getElementsByTagName('head')[0].appendChild(meta);
-        container.className = "unity-mobile";
-
-        // To lower canvas resolution on mobile devices to gain some
-        // performance, uncomment the following line:
-        // config.devicePixelRatio = 1;
-
-        canvas.style.width = window.innerWidth + 'px';
-        canvas.style.height = window.innerHeight + 'px';
-
-        unityShowBanner('WebGL builds are not supported on mobile devices.');
-      } else {
-        // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
-
-        canvas.style.width = "960px";
-        canvas.style.height = "600px";
-      }
-
-      loadingBar.style.display = "block";
-
-      var script = document.createElement("script");
-      script.src = loaderUrl;
-      script.onload = () => {
-        createUnityInstance(canvas, config, (progress) => {
-          progressBarFull.style.width = 100 * progress + "%";
-        }).then((unityInstance) => {
-          loadingBar.style.display = "none";
-          fullscreenButton.onclick = () => {
-            unityInstance.SetFullscreen(1);
-          };
-        }).catch((message) => {
-          alert(message);
-        });
-      };
-      document.body.appendChild(script);
+        UnityLoader.instantiate("unityContainer", "Build/CompiledWEBGL.json");
     </script>
-  </body>
-</html>
+</head>
+<body class="bg">
+    <div class="head">
+        <div class="headItemLeft">
+            <p class="headItemLeft"><br></p>
+            <p class="headItemLeft"></p>
+            <p class="headItemLeft"> </p>
+            <br>
+        </div>
+        <div class="headItemRight">
+            <p class="headItemLeft">    <img src="images/Ава.png" height="128" width="128"><br>
+            <p class="headItemLeft"><f24px><a href="https://github.com/KEP0CUH" target="_blank">Мой github профиль.</a> </f24px></p>
+            <?php  111 ?>
+            <br>
+        </div>
+    </div>
+    <div align="center">
+        <br>
+        <table>
+            <tr>    <td></td><td rowspan="1">Образование: </td>   <td colspan="4">         Незаконченное высшее, студент 4 курс-а МАИ Стрела(последний год) </td>                                                                                  </tr>
+            <tr>    <td></td><td>Направление:    </td>     <td colspan="2">Информатика и вычислительная техника</td>                                                      </tr>
+            <tr>    <td></td><td>Английский язык: </td>                <td><red> █  </red> Технический, могу читать документацию.<blue> </blue></td></tr>
+            <tr>    <td></td><td>Навыки \ технологии:  </td>                <td> <yellow>█  Базовые знания:  Github, C++, Qt; .Net 6.0, ASP.NET+IIS; Blender3D; HTML+CSS+PHP+SQL и др.</yellow><br><green>█ Выше базовых:  ООП,SOLID, C#, UnityEngine3D,VS и по мелочам.</green> <blue> </blue></td></tr>
+            <tr>    <td></td><td>Почта:   </td>     <td colspan="2"><a href="mailto:12312363432@mail.ru">12312363432@mail.ru</a></td>                                                      </tr>
+        </table>
+    </div>
+        <div align="middle">
+            <f24px><hr align="center" width="65%">
+                <blue>↓Краткое резюме↓</blue>
+                <br><hr align="center" width="55%">
+
+                В 20(18)-(19) начал погружение в программирование.<br> Пробовал основы С++,остановился на C# в силу хорошей пригодности для обучения.<br>
+                Часто возвращался к плюсам в ходе обучения в институте. <br><br> Помимо этого успел ознакомиться с множеством самых разных "около айтишных" тем.<br>
+                <br><br><br><hr align="center" width="55%"><blue>Об основном Pet-проекте.</blue><br><br>
+                После изучения <a href="https://metanit.com/sharp/tutorial/" target="_blank"> ---C#--- </a> взялся за изучение <a href="https://docs.unity3d.com/ScriptReference/Serializable.html" target="_blank">Unity3D</a>  - кроссплатфомернного движка.<br>
+                Было желание создать что-то наподобие ММО космических рейнджеров или вакуума-онлайн. В силу неопытности не знал, с чего начать.<br>
+                Поэтому выбрал популярное в среде новичков решение для клиент-серверного взаимодействия<br>
+                Остановился на <a href="https://www.photonengine.com/" target="_blank"> Photon-е</a> и понял, что он мне не подходит.
+                Там используется комнатный матчмейкинг, к тому же сервера - облачные.<br> Получился по факту мультиплеер для пары человек. Мне же нужен был выделенный сервер с "белым" ip, к которому я мог бы иметь полный доступ.<br><br><br>
+                <hr width="69%">↓Получилось примерно так↓<br><br>
+
+                <div id="unityContainer" style="width: 1280px; height: 720px; margin: auto"></div><br><br>
+
+                <hr width="75%">В 2020 году находился в поисках решения,<br>
+                которое позволило бы мне сделать не мультиплеер, а реал-таймовую ММО.<br>
+                <br><br> Особое внимание уделял вопросам, касающимся архитектуры проектов. Поначалу пробовал на системе менеджеров.<br>В итоге остановился на MVC.<br>
+                К этому моменту времени уже было представление, что мне требуется: сервер на сокетах и клиент к нему. <br>
+
+                <br> Сделал простой консольный сервер, опираясь на уроки сайта
+                <a href="https://metanit.com/sharp/tutorial/" target="_blank">Metanit.</a><br>
+                В частности ознакомился с темами:
+                <a href="https://metanit.com/sharp/net/4.3.php" target="_blank">протокол TCP</a> ,
+                <a href="https://metanit.com/sharp/net/5.1.php" target="_blank">протокол UDP</a> ,
+                <a href="https://metanit.com/sharp/net/3.2.php" target="_blank">клиент-серверное приложение на сокетах.</a><br><br>
+
+                <img src="/images/КлиентСервер.png"><br>Взаимодействие консольного сервера с консольным клиентом через сокеты.<hr width="65%"><br><br>
+                По роликам на youtube сделал это  дело многопоточным.<br>
+                Настроил его на работу в кодировке UTF-8.<br>
+                <br>В дальнейшем углублялся в тему сериализации данных,в ч.с. с JSON, конвертировал различные типы данных в байты.
+                <br>Дабы избежать ручной обработки векторов и кватернионов перенес консольный сервер на UnityEngine.<br>
+                <img src="/images/ЮнитиКлиентСервер.png"><br>Сервер на юнити.<hr width="65%"><br>
+                Пробовал событийно-ориентированный подход к программированию<br><br>
+                <img src="/images/События.png"><br>Событие спавна предметов.<hr width="65%"><br>
+                <hr width="65%">╔=====================================╗<br>╚=====================================╝
+            </f24px>
+        </div>
+</body>
