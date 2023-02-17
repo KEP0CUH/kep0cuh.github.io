@@ -1,5 +1,269 @@
 ---
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
+@charset "utf-8";
+
+// Our variables
+$base-font-family: "PT Serif", Georgia, "Times New Roman", serif;
+$code-font-family: "Consolas", "Lucida Console", monospace;
+$base-font-size:   18px;
+$base-font-weight: 400;
+$small-font-size:  16px;
+$code-block-font-size: 14px;
+$base-line-height: 1.5;
+
+$spacing-unit:     30px;
+
+$text-color:       #000;
+$background-color: #fefefe;
+$brand-color:      #2a7ae2;
+$code-background-color: #fff;
+$code-border-color: #6c6c6c;
+$inline-code-border-color: #b0b0b0;
+
+$grey-color:       #323232;
+$grey-color-light: lighten($grey-color, 25%);
+$grey-color-dark:  darken($grey-color, 25%);
+
+// Width of the content area
+$content-width:    960px;
+
+$on-palm:          600px;
+$on-laptop:        960px;
+
+@mixin media-query($device) {
+    @media screen and (max-width: $device) {
+        @content;
+    }
+}
+
+// CUSTOM OVERRIDES
+pre.highlight code
+{
+    /*font-family: Consolas,Lucida Console,Menlo,Monaco,monospace;*/
+    font-family: $code-font-family;
+    background: $code-background-color !important;
+}
+code.highlighter-rouge
+{
+    font-size: $small-font-size;
+    font-family: $code-font-family;
+    background: $background-color !important;
+    border: 1px solid $inline-code-border-color !important;
+}
+.wrapper
+{
+    padding-top: 30px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.page-content
+{
+    padding: 0 !important;
+
+    .wrapper
+    {
+        background-color: #fefefe;
+
+        h1, h2, h3
+        {
+            font-weight: bold;
+        }
+
+        .page-section
+        {
+            h1, h2, h3
+            {
+                text-align: center;
+
+                .text-left
+                {
+                    text-align: left;
+                }
+            }
+        }
+
+        h1
+        {
+            margin-top: 48px;
+            margin-bottom: 14px;
+        }
+        
+        h2
+        {
+            margin-top: 32px;
+            margin-bottom: 10px;
+        }
+
+        h2.table-of-contents-title
+        {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+        
+        h3
+        {
+            margin-top: 24px;
+            margin-bottom: 6px;
+        }
+
+        p
+        {
+            text-align: justify;
+            @include media-query($on-palm) {
+                hyphens: auto;
+                -moz-hyphens: auto;
+                -webkit-hyphens: auto;
+                -ms-hyphens: auto;
+            }
+        }
+
+        code
+        {
+            text-align: left;
+        }
+
+        table
+        {
+            border-collapse: collapse;
+            border-spacing: 0;
+            margin-bottom: 12px;
+        }
+
+        th
+        {
+            background-color: #4CAF50;
+            border: 1px solid #4a644b;
+            padding: 6px;
+            color: white;
+        }
+
+        td
+        {
+            border: 1px solid #dddddd;
+            padding: 6px;
+        }
+    }
+}
+.site-footer
+{
+    padding-top: 0 !important;
+    border-top: 0 !important;
+
+    .wrapper
+    {
+        background-color: #e0e0e8;
+    }
+}
+.site-header
+{
+    border-bottom: 0 !important;
+
+    .wrapper
+    {
+        background-color: #e0e0e8;
+    }
+}
+.highlighter-rouge pre.highlight
+{
+    border: 1px solid $code-border-color;
+    background: $code-background-color !important;
+}
+// CUSTOM OVERRIDES END
+
+// CUSTOM POST PREVIEW BOX
+$post-preview-width: 20%;
+$post-description-width: 100% - $post-preview-width;
+$post-box-outline-color: #7080b0;
+$post-box-fill-color: #f8f8f8;
+$post-box-padding: 4px;
+
+.post-box
+{
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 1px solid $post-box-outline-color;
+    padding: $post-box-padding;
+    background-color: $post-box-fill-color;
+    border-radius: 4px;
+    margin-bottom: 20px;
+
+    .post-preview
+    {
+        display: inline-block;
+        width: $post-preview-width;
+        height: auto;
+
+        img
+        {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .post-description
+    {
+        vertical-align: top;
+        display: inline-block;
+        max-width: -webkit-calc(#{$post-description-width} - 2 * #{$post-box-padding});
+        max-width: calc(#{$post-description-width} - 2 * #{$post-box-padding});
+
+        .post-link
+        {
+            font-size: $base-font-size;
+            display: block;
+
+            a
+            {
+                vertical-align: middle;
+            }
+        }
+
+        .post-subtitle
+        {
+            color: $grey-color;
+            font-size: $small-font-size;
+            display: block;
+        }
+    }
+}
+// END CUSTOM POST PREVIEW BOX
+
+// CUSTOM TABLE OF CONTENTS
+.table-of-contents
+{
+    background-color: #eee;
+    border: 1px solid $grey-color;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    margin-top: 5px;
+    padding: 10px;
+    display: inline-block;
+
+    h2
+    {
+        margin: 0;
+    }
+
+    .table-of-contents-rows
+    {
+        padding-left: 15px;
+    }
+}
+
+.table-of-contents.hidden
+{
+    display: none;
+}
+// CUSTOM TABLE OF CONTENTS END
+
+// Minima also includes a mixin for defining media queries.
+// Use media queries like this:
+// @include media-query($on-palm) {
+//     .wrapper {
+//         padding-right: $spacing-unit / 2;
+//         padding-left: $spacing-unit / 2;
+//     }
+// }
 
 @import "minima";
