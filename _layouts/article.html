@@ -1,0 +1,30 @@
+---
+layout: default
+---
+
+{% include post_breadcrumbs.html collection_name='Все статьи' %}
+
+<section class='page-section docs strong-headers'>
+  <div class='container-narrow'>
+    {% if page.subtitle %}
+      <p>{{ page.subtitle }}</p>
+      {% if page.github %}
+        <blockquote>
+          <p>Пример к статье <a href="{{ page.github }}">доступен на github</a></p>
+        </blockquote>
+      {% endif %}
+      {% if page.screenshot %}
+        <p><img src="{{ page.screenshot }}" alt="Иллюстрация"></p>
+      {% endif %}
+    {% endif %}
+    <hr>
+    <div class="table-of-contents hidden">
+    <h2 class="table-of-contents-title not-in-toc">Содержание</h2>
+    <div class="table-of-contents-rows"></div>
+    </div>
+    {{ content }}
+    {% if page.category != 'ignore' %}
+    <hr>
+    {% endif %}
+  </div>
+</section>
