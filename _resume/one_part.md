@@ -1,36 +1,171 @@
 ---
-title: "Первая часть"
+title: "Резюме"
 ---
-
-## Именование
-
-Следующая таблица даст понимание стиля именования:
-
-|<span style="background-color:black;color:yellow">1</span>                      |       2                      |                     3        |
-|----------------------|------------------------------|------------------------------|
-| функции              | UpperCamelCase               | `IsInTriangle(...)`          |
-|----------------------|------------------------------|------------------------------|
-
-| <span style="color:white">Образование</span>         || <span style="color:yellow">Образование</span>| Пример|
-|----------------------|------------------------------|------------------------------|
-| uniform-переменные  | wad| префикс "u" и UpperCamelCase | `uniform mat4 uWorldMatrix;` |
-| атрибуты вершин      | префикс "a" и UpperCamelCase | `in vec2 aPosition;`         |
-| out у vertex шейдера | префикс "v" и UpperCamelCase | `out vec4 vTexCoord;`        |
-| структуры            | UpperCamelCase               | `struct LightSource`         |
-| функции              | UpperCamelCase               | `IsInTriangle(...)`          |
-|----------------------|------------------------------|------------------------------|
-|2123				   |	dawdawd					  |adwd							 |
-
-
+<div class="wrapper" style="background-color:#df91ea"> </div>
 ## Введение
 
-<table>
-            <tr>    <td rowspan="2">Образование: </td>   <td colspan="4">         Незаконченное высшее, студент 4 курс-а МАИ "Стрела" </td>                                                                                  </tr>
-            <tr>    <td>Направление:    </td>     <td colspan="2">Информатика и вычислительная техника</td>                                                      </tr>
-            <tr>    <td></td><td>Английский язык: </td>                <td><red> █  </red> Технический, могу читать документацию.<blue> </blue></td></tr>
-            <tr>    <td></td><td>Навыки \ технологии:  </td>                <td> <green>█  ООП, C#, UnityEngine3D и по мелочам.</green><br><yellow>█  Базовые знания HTML,CSS,PHP, Github, C++, C</yellow> .<blue> </blue></td></tr>
-            <tr>    <td></td><td>Почта:   </td>     <td colspan="2">12312363432@mail.ru</td>                                                      </tr>
-        </table>
+<span style="color:yellow">█</span>Образование: <br> |  Незаконченное высшее студент 4 курса МАИ «Стрела»
++:---|:---|:---|+
+Направление|**Информатика и вычислительная техника**
+Английский язык:| **Технический, могу читать документацию.**
+Навыки \ технологии|<span style="color:green">█</span> Выше базовых: **`C#`, `ООП`, `SOLID`, `UnityEngine3D`, `Windows`**<br><span style="color:yellow">█</span> Базовые знания: **`HTML`, `CSS`, `PHP`, `Github`, `Qt`, `C++`, `C`**
+Почта| **`12312363432@mail.ru`**
+Телефон|**`+7ххх9ххх6хх`**
+
+
+## ↓Краткое резюме↓
+В 20(18)-(19) начал погружение в программирование. Пробовал основы С++, остановился на C# в силу хорошей пригодности для обучения.
+Часто возвращался к плюсам в ходе обучения в институте. Помимо этого успел ознакомиться с множеством самых разных "около айтишных" тем.
+## Об основном Pet-проекте
+
+После изучения основ
+<a href="https://metanit.com/sharp/tutorial/" target="_blank">**` C# `**</a>
+взялся за изучение 
+<a href="https://docs.unity3d.com/ScriptReference/Serializable.html" target="_blank">**` Unity3D `**</a>
+  — кроссплатформенной среды разработки приложений.<br>
+Имелось желание создать что-то наподобие ММО космических рейнджеров или вакуума-онлайн. В силу неопытности не знал, с чего начать.<br>
+Поэтому выбрал популярное в среде новичков решение для клиент-серверного взаимодействия<br>
+Остановился на 
+<a href="https://www.photonengine.com/" target="_blank">**` Photon-е `**</a>
+и спустя время понял, что он мне не подходит. Там используется комнатный матчмейкинг, к тому же сервера — облачные.<br>
+Получился по факту мультиплеер для пары человек. Мне же нужен был выделенный сервер с "белым" ip, к которому я мог бы иметь полный доступ.<br><br><br>
+<hr width="69%" align="center">↓Получилось как-то так↓<br><br>
+
+<div class="unity-desktop">
+      <canvas id="unity-canvas" width=1280 height=720></canvas>
+      <div id="unity-loading-bar">
+        <div id="unity-logo"></div>
+        <div id="unity-progress-bar-empty">
+          <div id="unity-progress-bar-full"></div>
+        </div>
+      </div>
+      <div id="unity-warning"> </div>
+      <div id="unity-footer">
+        //<div id="unity-webgl-logo"></div>
+        <div id="unity-fullscreen-button"></div>
+        <div id="unity-build-title">Full Screen</div>
+      </div>
+    </div>
+    <script>
+      var container = document.querySelector("#unity-container");
+      var canvas = document.querySelector("#unity-canvas");
+      var loadingBar = document.querySelector("#unity-loading-bar");
+      var progressBarFull = document.querySelector("#unity-progress-bar-full");
+      var fullscreenButton = document.querySelector("#unity-fullscreen-button");
+      var warningBanner = document.querySelector("#unity-warning");
+
+      // Shows a temporary message banner/ribbon for a few seconds, or
+      // a permanent error message on top of the canvas if type=='error'.
+      // If type=='warning', a yellow highlight color is used.
+      // Modify or remove this function to customize the visually presented
+      // way that non-critical warnings and error messages are presented to the
+      // user.
+      function unityShowBanner(msg, type) {
+        function updateBannerVisibility() {
+          warningBanner.style.display = warningBanner.children.length ? 'block' : 'none';
+        }
+        var div = document.createElement('div');
+        div.innerHTML = msg;
+        warningBanner.appendChild(div);
+        if (type == 'error') div.style = 'background: red; padding: 10px;';
+        else {
+          if (type == 'warning') div.style = 'background: yellow; padding: 10px;';
+          setTimeout(function() {
+            warningBanner.removeChild(div);
+            updateBannerVisibility();
+          }, 5000);
+        }
+        updateBannerVisibility();
+      }
+
+      var buildUrl = "Build";
+      var loaderUrl = buildUrl + "/kep0cuh.github.io.loader.js";
+      var config = {
+        dataUrl: buildUrl + "/kep0cuh.github.io.data",
+        frameworkUrl: buildUrl + "/kep0cuh.github.io.framework.js",
+        codeUrl: buildUrl + "/kep0cuh.github.io.wasm",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "DefaultCompany",
+        productName: "AnotherStarsSingle",
+        productVersion: "1.0",
+        showBanner: unityShowBanner,
+      };
+
+      // By default Unity keeps WebGL canvas render target size matched with
+      // the DOM size of the canvas element (scaled by window.devicePixelRatio)
+      // Set this to false if you want to decouple this synchronization from
+      // happening inside the engine, and you would instead like to size up
+      // the canvas DOM size and WebGL render target sizes yourself.
+      // config.matchWebGLToCanvasSize = false;
+
+      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+        // Mobile device style: fill the whole browser client area with the game canvas:
+
+        var meta = document.createElement('meta');
+        meta.name = 'viewport';
+        meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
+        document.getElementsByTagName('head')[0].appendChild(meta);
+        container.className = "unity-mobile";
+
+        // To lower canvas resolution on mobile devices to gain some
+        // performance, uncomment the following line:
+        // config.devicePixelRatio = 1;
+
+        canvas.style.width = window.innerWidth + 'px';
+        canvas.style.height = window.innerHeight + 'px';
+
+        unityShowBanner('WebGL builds are not supported on mobile devices.');
+      } else {
+        // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
+
+        canvas.style.width = "1280px";
+        canvas.style.height = "720px";
+      }
+
+      loadingBar.style.display = "block";
+
+      var script = document.createElement("script");
+      script.src = loaderUrl;
+      script.onload = () => {
+        createUnityInstance(canvas, config, (progress) => {
+          progressBarFull.style.width = 100 * progress + "%";
+        }).then((unityInstance) => {
+          loadingBar.style.display = "none";
+          fullscreenButton.onclick = () => {
+            unityInstance.SetFullscreen(1);
+          };
+        }).catch((message) => {
+          alert(message);
+        });
+      };
+      document.body.appendChild(script);
+    </script>
+
+<br><br>
+
+<hr width="75%">В 2020 году находился в поисках решения,<br>
+которое позволило бы мне сделать не мультиплеер, а реал-таймовую ММО.<br>
+<br><br> Особое внимание уделял вопросам, касающимся архитектуры проектов. Поначалу пробовал на системе менеджеров.<br>В итоге остановился на MVC.<br>
+К этому моменту времени уже было представление, что мне требуется: сервер на сокетах и клиент к нему. <br>
+
+<br> Сделал простой консольный сервер, опираясь на уроки сайта
+<a href="https://metanit.com/sharp/tutorial/" target="_blank">Metanit.</a><br>
+                В частности ознакомился с темами:
+<a href="https://metanit.com/sharp/net/4.3.php" target="_blank">протокол TCP</a> ,
+<a href="https://metanit.com/sharp/net/5.1.php" target="_blank">протокол UDP</a> ,
+<a href="https://metanit.com/sharp/net/3.2.php" target="_blank">клиент-серверное приложение на сокетах.</a><br><br>
+
+<img src="/images/КлиентСервер.png"><br>Взаимодействие консольного сервера с консольным клиентом через сокеты.<hr width="65%"><br><br>
+По роликам на youtube сделал это  дело многопоточным.<br>
+Настроил его на работу в кодировке UTF-8.<br>
+<br>В дальнейшем углублялся в тему сериализации данных,в ч.с. с JSON, конвертировал различные типы данных в байты.
+<br>Дабы избежать ручной обработки векторов и кватернионов перенес консольный сервер на UnityEngine.<br>
+<img src="/images/ЮнитиКлиентСервер.png"><br>Сервер на юнити.<hr width="65%"><br>
+Пробовал событийно-ориентированный подход к программированию<br><br>
+<img src="/images/События.png"><br>Событие спавна предметов.<hr width="65%"><br>
+<hr width="65%">╔=====================================╗<br>╚=====================================╝
+</f24px>
+</div>
 
 <div align="middle">
             <f24px><hr align="center" width="65%">

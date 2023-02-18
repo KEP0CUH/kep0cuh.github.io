@@ -7,8 +7,8 @@
 $base-font-family: "PT Serif", Georgia, "Times New Roman", serif;
 $code-font-family: "Consolas", "Lucida Console", monospace;
 $base-font-size:   18px;
-$base-font-weight: 400;
-$small-font-size:  16px;
+$base-font-weight: 500;
+$small-font-size:  18px;
 $code-block-font-size: 14px;
 $base-line-height: 1.5;
 
@@ -48,21 +48,27 @@ code.highlighter-rouge
 {
     font-size: $small-font-size;
     font-family: $code-font-family;
-    background: $background-color !important;
+    background: #676cf552 !important;
     border: 1px solid $inline-code-border-color !important;
 }
 .wrapper
 {
+    background:red;
     padding-top: 30px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+.back-and-current
+{
+        background: #dadada;
+}
+
 .page-content
 {
     padding: 0 !important;
-
+    background-color: #3e3e0f36;
     .wrapper
     {
-        background-color: #fefefe;
+        background-color: #aecffc85;
 
         h1, h2, h3
         {
@@ -131,15 +137,16 @@ code.highlighter-rouge
 
         th
         {
-            background-color: #4CAF50;
-            border: 1px solid #4a644b;
+            font-size: 20px;
+            background-color: #a14af77a;
+            border: 2px solid #4a644b;
             padding: 6px;
-            color: white;
+            color: black;
         }
 
         td
         {
-            border: 1px solid #dddddd;
+            border: 2px solid #4a644b;
             padding: 6px;
         }
     }
@@ -148,19 +155,21 @@ code.highlighter-rouge
 {
     padding-top: 0 !important;
     border-top: 0 !important;
+    background-color: #3e3e0f36;
 
     .wrapper
     {
-        background-color: #e0e0e8;
+        background-color: #f5f4da47;
     }
 }
 .site-header
 {
     border-bottom: 0 !important;
+    background-color: #3e3e0f36;
 
     .wrapper
     {
-        background-color: #e0e0e8;
+        background-color: #f5f4da47;
     }
 }
 .highlighter-rouge pre.highlight

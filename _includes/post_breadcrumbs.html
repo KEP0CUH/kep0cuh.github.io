@@ -1,13 +1,18 @@
+<link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">  
 <div class='subtron text-left'>
   <div class='container-narrow'>
     <h2 class="arcticle-breadcrumbs not-in-toc">
+            <span class="back-and-current">
       <a href='{{ site.baseurl }}/{{ page.collection }}/'>{{ include.collection_name }}</a>
+
       <span class="docs-breadcrumbs-divider">/</span>
+      
       {% if page.breadcrumb %}
       {{ page.breadcrumb }}
       {% else %}
       {{ page.title }}
       {% endif %}
+      </span>
     </h4>
   </div>
 </div>
