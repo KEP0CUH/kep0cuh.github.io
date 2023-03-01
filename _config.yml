@@ -55,21 +55,15 @@ collections:
   compilers:
     output: true
     permalink: '/compilers/:path'
-  os:
-    output: true
-    permalink: '/os/:path'
-  os2:
-    output: true
-    permalink: '/os2/:path'
+  # os:
+  #   output: true
+  #   permalink: '/os/:path'
   cxx:
     output: true
     permalink: '/cxx/:path'
   resume:
     output: true
     permalink: '/resume/:path'
-  resume2:
-    output: true
-    permalink: '/resume/pages/:path'
 
 defaults:
     - scope:
@@ -100,14 +94,12 @@ defaults:
         type: compilers
       values:
         layout: article
-    - scope:
-        type: os
-      values:
-        layout: article
-    - scope:
-        type: os2
-      values:
-        layout: article
+    # - scope:
+    #     type: os
+      # values:
+      #   layout: article
+      # values:
+      #   layout: article
     - scope:
         type: cxx
       values:
@@ -120,8 +112,6 @@ defaults:
         type: pages
       values:
         layout: article
-    - scope:
-        type: resume2
       values:
         layout: article
 

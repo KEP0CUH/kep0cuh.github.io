@@ -37,6 +37,98 @@ $on-laptop:        960px;
     }
 }
 
+/* Table and row+col */
+.div-table {
+  display: table;  
+  border-collapse: collapse;
+  margin: 4px;       
+  width: 100%;        
+  //background-color: #eee;         
+  border: 1px solid #666666;         
+  border-spacing: 5px; /* cellspacing:poor IE support for  this */
+}
+
+.div-table-row {
+  display: table-row;
+  width: 100%;
+  clear: both;
+  border: 2px solid black;
+  border-spacing: 24px solid black;
+}
+.div-table-row.first
+{
+    background-color:#a14af77a;
+}
+
+.div-table-cell {
+    display: table-cell;         
+    width: 50%;        
+    padding-left: 10px;
+    vertical-align:middle; 
+    color: black;
+    border: 2px solid black;
+
+    tilda
+    {
+        font-family: $code-font-family;
+        font-weight:bold;
+        border: 1px solid $inline-code-border-color !important;
+    }
+
+    tilda-background
+    {
+        font-family: $code-font-family;
+        font-weight:bold;
+        background: #676cf552 !important;
+        border: 1px solid $inline-code-border-color !important;
+    }
+}
+.div-table-cell-solid
+{
+    display: table-cell;
+    width: 50%;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 2px;
+    color: black;
+    border: 2px solid black
+}
+
+.md-typeset .center-table :is(td,th):not([align]) {
+    /* Reset alignment for table cells */
+    text-align: initial;
+}
+
+.text-in-center
+{
+    padding: 7px;
+    color: black;
+    text-align: center;
+    font-weight: bold;
+    border: 2px solid black;
+    background: #b1e3d4;
+}
+
+.text-simple
+{
+    padding: 7px;
+    color: black;
+    text-align: left;
+    border: 2px solid black;
+    background: #d9d6d2;
+}
+
+
+.text-under-picture
+{
+    padding: 10px;
+    color: black;
+    text-align: center;
+    font-style: italic;
+    background: #b1e3d4;
+    border: 2px solid black;
+}
+
 // CUSTOM OVERRIDES
 pre.highlight code
 {
@@ -247,6 +339,7 @@ $post-box-padding: 4px;
     margin-bottom: 15px;
     margin-top: 5px;
     padding: 10px;
+    padding-right: 0px;
     display: inline-block;
 
     h2

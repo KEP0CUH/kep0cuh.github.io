@@ -12,7 +12,7 @@ layout: default
     {% include course_item.html permalink='/compilers/' %}
     {% include course_item.html permalink='/opr_js/' %}
     {% include course_item.html permalink='/opr_cxx/' %}
-    {% include course_item.html permalink='/os/' %}
+<!--     {% include course_item.html permalink='/os/' %} -->
     {% include course_item.html permalink='/resume/' %}
     {% include course_item.html permalink='/resume/pages/' %}
     {% include course_item.html permalink='/pages/' %}

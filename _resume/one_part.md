@@ -4,234 +4,74 @@ title: "Резюме"
 <div class="wrapper" style="background-color:#df91ea"> </div>
 ## Введение
 
-<span style="color:yellow">█</span>Образование: <br> |  Незаконченное высшее студент 4 курса МАИ «Стрела»
+Образование: <br> |  Незаконченное высшее студент 4 курса МАИ «Стрела»
 +:---|:---|:---|+
 Направление|**Информатика и вычислительная техника**
 Английский язык:| **Технический, могу читать документацию.**
 Навыки \ технологии|<span style="color:green">█</span> Выше базовых: **`C#`, `ООП`, `SOLID`, `UnityEngine3D`, `Windows`**<br><span style="color:yellow">█</span> Базовые знания: **`HTML`, `CSS`, `PHP`, `Github`, `Qt`, `C++`, `C`**
-Почта| **`12312363432@mail.ru`**
-Телефон|**`+7ххх9ххх6хх`**
+Github|<a href="https://github.com/KEP0CUH" target="_blank"> <span class="icon icon--github"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"></path></a></svg>открыть|
+Почта| <a href="">**`12312363432@mail.ru`**</a>
+Телефон|<a href="">**`+7ххх9ххх6хх`**</a>
 
+## ↓ Краткое резюме ↓
 
-## ↓Краткое резюме↓
-В 20(18)-(19) начал погружение в программирование. Пробовал основы С++, остановился на C# в силу хорошей пригодности для обучения.
-Часто возвращался к плюсам в ходе обучения в институте. Помимо этого успел ознакомиться с множеством самых разных "около айтишных" тем.
-## Об основном Pet-проекте
+<div class="text-simple">
+  В 20(18)-(19) начал погружение в программирование. Пробовал основы С++, остановился на C# в силу хорошей пригодности для обучения. Часто возвращался к плюсам в ходе обучения в институте. Помимо этого успел ознакомиться с множеством самых разных "около айтишных" тем.</div>
 
-После изучения основ
-<a href="https://metanit.com/sharp/tutorial/" target="_blank">**` C# `**</a>
+## Об основном Pet-проекте (рис. 1)
+
+<div class="text-simple">
+  После изучения основ
+<a href="https://metanit.com/sharp/tutorial/" target="_blank"> C# </a>
 взялся за изучение 
-<a href="https://docs.unity3d.com/ScriptReference/Serializable.html" target="_blank">**` Unity3D `**</a>
-  — кроссплатформенной среды разработки приложений.<br>
-Имелось желание создать что-то наподобие ММО космических рейнджеров или вакуума-онлайн. В силу неопытности не знал, с чего начать.<br>
-Поэтому выбрал популярное в среде новичков решение для клиент-серверного взаимодействия<br>
-Остановился на 
-<a href="https://www.photonengine.com/" target="_blank">**` Photon-е `**</a>
-и спустя время понял, что он мне не подходит. Там используется комнатный матчмейкинг, к тому же сервера — облачные.<br>
-Получился по факту мультиплеер для пары человек. Мне же нужен был выделенный сервер с "белым" ip, к которому я мог бы иметь полный доступ.<br><br><br>
-<hr width="69%" align="center">↓Получилось как-то так↓<br><br>
-
-<div class="unity-desktop">
-      <canvas id="unity-canvas" width=1280 height=720></canvas>
-      <div id="unity-loading-bar">
-        <div id="unity-logo"></div>
-        <div id="unity-progress-bar-empty">
-          <div id="unity-progress-bar-full"></div>
-        </div>
-      </div>
-      <div id="unity-warning"> </div>
-      <div id="unity-footer">
-        //<div id="unity-webgl-logo"></div>
-        <div id="unity-fullscreen-button"></div>
-        <div id="unity-build-title">Full Screen</div>
-      </div>
-    </div>
-    <script>
-      var container = document.querySelector("#unity-container");
-      var canvas = document.querySelector("#unity-canvas");
-      var loadingBar = document.querySelector("#unity-loading-bar");
-      var progressBarFull = document.querySelector("#unity-progress-bar-full");
-      var fullscreenButton = document.querySelector("#unity-fullscreen-button");
-      var warningBanner = document.querySelector("#unity-warning");
-
-      // Shows a temporary message banner/ribbon for a few seconds, or
-      // a permanent error message on top of the canvas if type=='error'.
-      // If type=='warning', a yellow highlight color is used.
-      // Modify or remove this function to customize the visually presented
-      // way that non-critical warnings and error messages are presented to the
-      // user.
-      function unityShowBanner(msg, type) {
-        function updateBannerVisibility() {
-          warningBanner.style.display = warningBanner.children.length ? 'block' : 'none';
-        }
-        var div = document.createElement('div');
-        div.innerHTML = msg;
-        warningBanner.appendChild(div);
-        if (type == 'error') div.style = 'background: red; padding: 10px;';
-        else {
-          if (type == 'warning') div.style = 'background: yellow; padding: 10px;';
-          setTimeout(function() {
-            warningBanner.removeChild(div);
-            updateBannerVisibility();
-          }, 5000);
-        }
-        updateBannerVisibility();
-      }
-
-      var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/kep0cuh.github.io.loader.js";
-      var config = {
-        dataUrl: buildUrl + "/kep0cuh.github.io.data",
-        frameworkUrl: buildUrl + "/kep0cuh.github.io.framework.js",
-        codeUrl: buildUrl + "/kep0cuh.github.io.wasm",
-        streamingAssetsUrl: "StreamingAssets",
-        companyName: "DefaultCompany",
-        productName: "AnotherStarsSingle",
-        productVersion: "1.0",
-        showBanner: unityShowBanner,
-      };
-
-      // By default Unity keeps WebGL canvas render target size matched with
-      // the DOM size of the canvas element (scaled by window.devicePixelRatio)
-      // Set this to false if you want to decouple this synchronization from
-      // happening inside the engine, and you would instead like to size up
-      // the canvas DOM size and WebGL render target sizes yourself.
-      // config.matchWebGLToCanvasSize = false;
-
-      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
-        // Mobile device style: fill the whole browser client area with the game canvas:
-
-        var meta = document.createElement('meta');
-        meta.name = 'viewport';
-        meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
-        document.getElementsByTagName('head')[0].appendChild(meta);
-        container.className = "unity-mobile";
-
-        // To lower canvas resolution on mobile devices to gain some
-        // performance, uncomment the following line:
-        // config.devicePixelRatio = 1;
-
-        canvas.style.width = window.innerWidth + 'px';
-        canvas.style.height = window.innerHeight + 'px';
-
-        unityShowBanner('WebGL builds are not supported on mobile devices.');
-      } else {
-        // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
-
-        canvas.style.width = "1280px";
-        canvas.style.height = "720px";
-      }
-
-      loadingBar.style.display = "block";
-
-      var script = document.createElement("script");
-      script.src = loaderUrl;
-      script.onload = () => {
-        createUnityInstance(canvas, config, (progress) => {
-          progressBarFull.style.width = 100 * progress + "%";
-        }).then((unityInstance) => {
-          loadingBar.style.display = "none";
-          fullscreenButton.onclick = () => {
-            unityInstance.SetFullscreen(1);
-          };
-        }).catch((message) => {
-          alert(message);
-        });
-      };
-      document.body.appendChild(script);
-    </script>
-
-<br><br>
-
-<hr width="75%">В 2020 году находился в поисках решения,<br>
-которое позволило бы мне сделать не мультиплеер, а реал-таймовую ММО.<br>
-<br><br> Особое внимание уделял вопросам, касающимся архитектуры проектов. Поначалу пробовал на системе менеджеров.<br>В итоге остановился на MVC.<br>
-К этому моменту времени уже было представление, что мне требуется: сервер на сокетах и клиент к нему. <br>
-
-<br> Сделал простой консольный сервер, опираясь на уроки сайта
-<a href="https://metanit.com/sharp/tutorial/" target="_blank">Metanit.</a><br>
-                В частности ознакомился с темами:
-<a href="https://metanit.com/sharp/net/4.3.php" target="_blank">протокол TCP</a> ,
-<a href="https://metanit.com/sharp/net/5.1.php" target="_blank">протокол UDP</a> ,
-<a href="https://metanit.com/sharp/net/3.2.php" target="_blank">клиент-серверное приложение на сокетах.</a><br><br>
-
-<img src="/images/КлиентСервер.png"><br>Взаимодействие консольного сервера с консольным клиентом через сокеты.<hr width="65%"><br><br>
-По роликам на youtube сделал это  дело многопоточным.<br>
-Настроил его на работу в кодировке UTF-8.<br>
-<br>В дальнейшем углублялся в тему сериализации данных,в ч.с. с JSON, конвертировал различные типы данных в байты.
-<br>Дабы избежать ручной обработки векторов и кватернионов перенес консольный сервер на UnityEngine.<br>
-<img src="/images/ЮнитиКлиентСервер.png"><br>Сервер на юнити.<hr width="65%"><br>
-Пробовал событийно-ориентированный подход к программированию<br><br>
-<img src="/images/События.png"><br>Событие спавна предметов.<hr width="65%"><br>
-<hr width="65%">╔=====================================╗<br>╚=====================================╝
-</f24px>
+<a href="https://docs.unity3d.com/ScriptReference/Serializable.html" target="_blank"> Unity3D </a>
+  — кроссплатформенной среды разработки приложений. Имелось желание разработать проект подобный космическим рейнджерам, но в жанре MMO или vacuum-online.<br>
+  В силу неопытности не знал, с чего начать. Поэтому выбрал популярное в среде новичков решение для клиент-серверного взаимодействия. Остановился на 
+<a href="https://www.photonengine.com/" target="_blank"> Photon-е </a>
+и спустя время понял, что он мне не подходит. Там используется комнатный матчмейкинг, а сервера — облачные.<br>
+  Получился по факту мультиплеер для пары человек. Мне же нужен был выделенный сервер с "белым" ip, к которому я мог бы иметь полный доступ.<br>
 </div>
+<br>
 
-<div align="middle">
-            <f24px><hr align="center" width="65%">
-                <blue>↓Резюме↓</blue>
-                <br><br>Привет!<br> Меня зовут Анатолий Стальнов.<br>
-                Я увлекаюсь программированием еще со школы. Все началось со школьного
-                <a href="https://yandex.ru/search/?text=КуМир" target="_blank">КуМир-а.</a><br><br>
+<div class="text-under-picture"><img src="/images/ИныеЗвезды.png" text-align="middle">Рис. 1 Прототип игры <a href="https://github.com/KEP0CUH/AnotherStarsSingle-Actual-version-" target="_blank"> Иные Звезды.</a></div>
 
-                Впоследствии немного занимался изучением web-а, выкатывал простой одностраничник на бесплатном хостинге
-                <a href="https://ru.000webhost.com/" target="_blank"> 000WebHost</a>.<br>
-                Впоследствии на гитхабе скачивал исходники одной довольно интересной браузерной игры <a href="https://2moons.de/" target="_blank"> 2moons.de </a> де-факто xterium, сделанной в виде сайта.<br>
-                Опять же размещал все это дело на хостинге. Пробовал копаться в них, немного изменяя баланс.<br>
-                Столкнулся с трудностями понимания чужого кода, а также с ограничениями бесплатного тарифа и дальше дело не пошло.<br><br><hr align="center" width="55%">
+<br>
+<div class="text-simple">
+  В 2020 году находился в поисках решения, которое позволило бы мне сделать не мультиплеерную, а реал-таймовую ММО с открытым миром.<br>
+  Особое внимание уделял вопросам, касающимся архитектуры проектов. Поначалу пробовал организовать систему менеджеров. В итоге остановил свой взор на MVC. К этому моменту времени уже было представление, что мне требуется: сервер на сокетах, клиент к нему и какой-нибудь VPS на Linux.  <br>
+  Сделал простой консольный сервер, опираясь на уроки сайта
+<a href="https://metanit.com/sharp/tutorial/" target="_blank"> Metanit.</a> (рис. 2) <br>
+  В частности ознакомился с темами:
+<a href="https://metanit.com/sharp/net/4.3.php" target="_blank"> протокол TCP</a> ,
+<a href="https://metanit.com/sharp/net/5.1.php" target="_blank"> протокол UDP</a> ,
+<a href="https://metanit.com/sharp/net/3.2.php" target="_blank"> клиент-серверное приложение на сокетах.</a><br><br>
+</div>
+<br>
 
-                В 10 классе пробовал изучать основы С++, но ушел на C#. В 11 классе успел съездить на олимпиаду.<br><br>
+<div class="text-under-picture"><img src="/images/КлиентСервер.png">Рис. 2 Взаимодействие консольного сервера с консольным клиентом через сокеты.</div>
 
-                Летом 2019 года взялся за изучение <a href="https://docs.unity3d.com/ScriptReference/Serializable.html" target="_blank">Unity3D</a>  - кроссплатфомернного движка в связке c
-                <a href="https://metanit.com/sharp/tutorial/" target="_blank">C# 8.0</a> <br>
-                Хотел создать что-то наподобие ММО космических рейнджеров или вакуума-онлайн. В силу неопытности не знал, с чего начать.<br>
-                Поэтому выбрал популярное в среде новичков решение для клиент-серверного взаимодействия<br>
-                Остановился на <a href="https://www.photonengine.com/" target="_blank"> Photon-е</a> и понял, что он мне не подходит.
-                Там используется комнатный матчмейкинг, к тому же сервера - облачные.<br> Получился по факту мультиплеер для пары человек. Мне же нужен был выделенный сервер, к которому я мог бы иметь полный доступ.<br><br><br>
-                <hr width="69%">↓В августе 2019 отказался от дальнейшего развития этого проекта. (Билд 2019 года) ↓<br><br>
+<br>
+<div class="text-simple">
+  По роликам на youtube сделал это  дело многопоточным. Настроил его на работу в кодировке UTF-8. Сделал пакетную обработку входящих и исходящих данных (рис. 3).
+</div>
+<br>
 
-                <div id="unityContainer" style="width: 1280px; height: 720px; margin: auto"></div><br><br>
+<div class="text-under-picture"><img src="/images/РаботаСервера.png" text-align="middle">Рис. 3 Простой консольный сервер с пакетной обработкой.</div>
 
-                <hr width="75%">С началом учебы осенью все отложил до 2020 года. В начале 2020 года находился в поисках решения,<br>
-                которое позволило бы мне сделать не мультиплеер, а реал-таймовую ММО наподобие vacuumonline<br>
-                <br><br> Также возникли вопросы, касающиеся архитектуры проектов. Поначалу остановился на самой простой системе менеджеров.<br>
-                К 2022 году объединил её с  "примитивной" MVC, +добавил использование событий.<br>
-                Незаметно прошел 2020, к 2021 году я уже имел представление, что мне требуется сделать: сервер на сокетах и клиент к нему. <br>
+<br>
+<div class="text-simple">
+  В дальнейшем углублялся в тему сериализации данных,в ч.с. с JSON, конвертировал различные типы данных в байты.<br>
+  Также ознакомился с XML разметкой и языком запросов XPath.<br>
+  Дабы избежать ручной обработки векторов и кватернионов перенес консольный сервер на UnityEngine (рис. 4).<br>
+</div>
+<br>
 
-                <br> Весной-летом 2021 консольный сервер был готов, опираясь на уроки сайта
-                <a href="https://metanit.com/sharp/tutorial/" target="_blank">Metanit.</a><br>
-                В частности ознакомился с темами:
-                <a href="https://metanit.com/sharp/net/4.3.php" target="_blank">протокол TCP</a> ,
-                <a href="https://metanit.com/sharp/net/5.1.php" target="_blank">протокол UDP</a> ,
-                <a href="https://metanit.com/sharp/net/3.2.php" target="_blank">клиент-серверное приложение на сокетах.</a><br><br>
+<div class="text-under-picture"><img src="/images/ЮнитиКлиентСервер.png">Рис. 4 Простой консольный сервер, перенесенный в Unity3D, использующий для просчета движения физику движка</div>
 
-                <img src="/images/КлиентСервер.png"><br>Взаимодействие консольного сервера с консольным клиентом через сокеты.<hr width="65%"><br><br>
-                С помощью роликов на youtube сделал это  дело многопоточным.<br>
-                Настроил его на работу в кодировке UTF-8.<br>
-                Синхронизировал ввод клавиш на клиенте и обработку на сервере.<br>
-                <br>Столкнувшись с трудностями ручной обработки векторов и кватернионов перенес консольный сервер на UnityEngine.<br>
-                Уже легко далось сделать синхронизацию позиций при некритичном падении производительности.<br>
-                добавил спавнеры NPC, предметов. Немного реализовал стрельбу.
-                <br> Впоследствии посмотрел новшества C# 10 и платформфы .net 6. Перешел на visual studio 2022.<br>
-                Отложил дальнейшую работу над проектом до зимы 2022 года, основные механики по факту сделал.<br>
-                Стрельба, движение, спавн, чат, фундамент для системы инвентаря. <br><br>
-                <img src="/images/ЮнитиКлиентСервер.png"><br>Сервер на юнити.<hr width="65%"><br>
-                Организовал какую-никакую систему событий, опираясь на статьи Habr.<br>
-                Она позволила мне создать гибкий контроль со стороны сервера над клиентами, чтобы данные в случае событий отключения\подключения клиента<br>
-                было легче обрабатывать \ передавать.<br><br>
-                <img src="/images/События.png"><br>Событие спавна предметов.<hr width="65%"><br>
-                В заключение, хотелось бы отметить, что сейчас я снова начал смотреть в сторону web-разработки,<br>
-                пробежался по php,html,css.<br> Это резюме как раз и сделано после этой пробежки.<br>
+<br>
+<div class="text-simple">Пробовал реализовать событийно-ориентированный подход к организации архитектуры проекта.</div>
+<br>
 
-                <hr width="65%">╔=====================================╗<br>╚=====================================╝
-            </f24px>
-        </div>
+<div class="text-under-picture"><img src="/images/События.png" text-align="middle">Рис. 5 Запуск события и вывод в консоль информации о нем, когда спавнер создает предмет(дроп) после уничтожения объекта.</div>
+<br>
 
-
-Ссылки:	
-
-- [Список дистрибутивов Linux (ru.wikipedia.org)](https://ru.wikipedia.org/wiki/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA_%D0%B4%D0%B8%D1%81%D1%82%D1%80%D0%B8%D0%B1%D1%83%D1%82%D0%B8%D0%B2%D0%BE%D0%B2_Linux)
-- [Версии Windows (ru.wikipedia.org)](https://ru.wikipedia.org/wiki/Windows#.D0.92.D0.B5.D1.80.D1.81.D0.B8.D0.B8)
-- [Wikimedia Traffic Analysis Report - Operating Systems (stats.wikimedia.org)](https://stats.wikimedia.org/wikimedia/squids/SquidReportOperatingSystems.htm)
-- [Android базируется на Linux, но что это значит? (rus-linux.net)](http://rus-linux.net/MyLDP/android/android-vs-linux.html)
-- [Яндекс](https://ya.ru)
